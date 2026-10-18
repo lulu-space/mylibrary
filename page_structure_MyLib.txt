@@ -1,0 +1,238 @@
+include description for each button using:    android:contentDescription="@string/write the button description here"
+
+
+normal button color:      if not an image, then use be:  android:backgroundTint="@android:color/holo_red_dark"
+
+
+page background color:     android:background="#f5f5dc"
+
+
+titlesize:    <TextView
+        android:id="@+id/textView"
+        android:layout_width="251dp"
+        android:layout_height="100dp"
+        android:text="write title here"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+
+
+
+back button:    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/back_button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235"
+        app:srcCompat="@drawable/backbtn2" />
+
+
+
+home button:     <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/home_button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"          <--!----text view is the title--->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/textView"             <--!----text view is the title--->
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/homebtn" />
+
+
+
+
+   normal button size:    <Button
+        android:id="@+id/button"
+        android:layout_width="256dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="button text here"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"               <--!----text view is the title--->
+        app:layout_constraintVertical_bias="0.892" />
+
+
+
+search bar code for xml:
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:queryHint="Search Colleges"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.002" />
+
+
+search bar code for kotlin:package package com.example.mylibrary
+
+import android.annotation.SuppressLint
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Filter
+import android.widget.ImageView
+import android.widget.ListView
+import android.widget.PopupMenu
+import android.widget.SearchView
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class Colleges : AppCompatActivity() {
+
+    private lateinit var listView: ListView // Declare ListView
+    private lateinit var arrayAdapter: CustomArrayAdapter // Declare CustomArrayAdapter
+    private val names = arrayOf(
+        "Graduate Studies",
+        "Pharmacy",
+        "Modern Media",
+        "Modern Sciences",
+        "Digital Sciences",
+        "Artificial Intelligence and Data Science",
+        "Allied Medical Sciences"
+    ) // Use arrayOf for array initialization
+
+    private lateinit var searchView: SearchView // Declare SearchView
+    private lateinit var popupImage: ImageView // Declare ImageView for popup menu
+
+    @SuppressLint("MissingInflatedId")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_colleges)
+
+        listView = findViewById(R.id.listview) // Corrected variable name
+        arrayAdapter = CustomArrayAdapter(this, android.R.layout.simple_list_item_1, names) // Use CustomArrayAdapter
+        listView.adapter = arrayAdapter // Use property access syntax
+
+        // Initialize the SearchView
+        searchView = findViewById(R.id.searchView) // Reference the SearchView from the layout
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener { // Set up the listener
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                arrayAdapter.filter.filter(newText) // Use filter method correctly
+                return true // Return true to indicate the event was handled
+            }
+        })
+
+        // Initialize the ImageView for the popup menu
+        popupImage = findViewById(R.id.popupImage)
+        popupImage.setOnClickListener { view ->
+            showPopupMenu(view)
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+    }
+
+    private fun showPopupMenu(view: View) {
+        // Create a PopupMenu
+        val popupMenu = PopupMenu(this, view)
+
+        // Inflate the menu resource
+        menuInflater.inflate(R.menu.popup_menu, popupMenu.menu)
+
+        // Set a click listener for menu items
+        popupMenu.setOnMenuItemClickListener { item: MenuItem ->
+            when (item.itemId) {
+                R.id.menu_item1 -> {
+                    // Action for Home button
+                    Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.menu_item2 -> {
+                    // Action for Info button
+                    Toast.makeText(this, "Info clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.menu_item3 -> {
+                    // Action for Report button
+                    Toast.makeText(this, "Report clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        // Show the popup menu
+        popupMenu.show()
+    }
+
+    // Custom ArrayAdapter to handle case-insensitive filtering
+    private class CustomArrayAdapter(context: Colleges, resource: Int, private val items: Array<String>) :
+        ArrayAdapter<String>(context, resource, items) {
+
+        private var filteredItems: List<String> = items.toList()
+
+        override fun getCount(): Int {
+            return filteredItems.size
+        }
+
+        override fun getItem(position: Int): String? {
+            return filteredItems[position]
+        }
+
+        override fun getPosition(item: String?): Int {
+            return filteredItems.indexOf(item)
+        }
+
+        override fun getFilter(): Filter {
+            return object : Filter() {
+                override fun performFiltering(constraint: CharSequence?): FilterResults {
+                    val results = FilterResults()
+                    val query = constraint.toString().lowercase() // Convert query to lower case
+                    results.values = if (query.isEmpty()) {
+                        items.toList() // Return all items if query is empty
+                    } else {
+                        items.filter { it.lowercase().contains(query) } // Filter items case-insensitively
+                    }
+                    return results
+                }
+
+                override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                    filteredItems = results?.values as List<String>
+                    notifyDataSetChanged() // Notify the adapter to refresh the list
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">My Library</string>
+    <string name="btn_menu">Menu</string>
+    <string name="lbl_ai_and_data_science">Artificial Intelligence and Data Science</string>
+    <string name="lbl_eng_tech">Engineering and Technology</string>
+    <string name="lbl_pharmacy">Pharmacy</string>
+    <string name="lbl_modern_media">Modern Media</string>
+    <string name="lbl_modern_sciences">Modern Sciences</string>
+    <string name="lbl_digital_sciences">Digital Sciences</string>
+    <string name="lbl_allied_medical_sciences">Allied Medical Sciences</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_back">Back</string>
+    <string name="hamburger_icon">menu</string>
+
+
+    <string-array name="mandatory_subjects">
+        <item>English</item>
+        <item>Arabic</item>
+        <item>Palestinian Studies</item>
+        <item>Computer Skills</item>
+    </string-array>
+
+    <string-array name="elective_requirements">
+        <item>Fine Arts</item>
+        <item>Physical Education</item>
+        <item>Islamic Culture</item>
+        <item>Critical Thinking</item>
+        <item>Hebrew Language</item>
+        <item>Turkish Language</item>
+    </string-array>
+
+    <string name="btn_intro_to_it_lab">Introduction to IT Lab</string>
+    <string name="btn_computer_networks_lab">Computer Networks Lab</string>
+    <string name="btn_digital_logic_design">Digital Logic Design</string>
+    <string name="btn_programming_fundamentals_ii_lab">Programming Fundamentals II Lab</string>
+    <string name="btn_data_structure_lab">Data Structure Lab</string>
+    <string name="btn_programming_fundamentals_ii">Programming Fundamentals II</string>
+    <string name="btn_data_structures">Data Structures</string>
+    <string name="btn_intro_to_computer_organization">Introduction to Computer Organization</string>
+    <string name="btn_algorithms_and_programming">Algorithms and Programming Techniques</string>
+    <string name="btn_intro_to_database">Introduction to Database</string>
+    <string name="btn_intro_to_database_lab">Introduction to Database (Lab)</string>
+    <string name="btn_intro_to_software_engineering">Introduction to Software Engineering</string>
+    <string name="btn_information_security">Information Security</string>
+    <string name="btn_mobile_programming">Mobile Programming</string>
+    <string name="btn_intro_to_operating_systems">Introduction to Operating Systems</string>
+    <string name="btn_software_testing_and_validation">Software Testing and Validation</string>
+    <string name="btn_internship">Internship</string>
+    <string name="btn_computer_science_foundation">Computer Science Foundation</string>
+    <string name="btn_programming_languages">Programming Languages</string>
+    <string name="btn_data_analysis">Data Analysis</string>
+    <string name="btn_software_development">Software Development</string>
+    <string name="btn_web_development">Web Development</string>
+    <string name="btn_machine_learning">Machine Learning</string>
+    <string name="btn_computer_graphics">Computer Graphics</string>
+    <string name="btn_network_security">Network Security</string>
+    <string name="btn_cloud_computing">Cloud Computing</string>
+    <string name="btn_artificial_intelligence">Artificial Intelligence</string>
+    <string name="btn_virtualization">Virtualization</string>
+    <string name="btn_big_data">Big Data</string>
+    <string name="btn_mobile_app_development">Mobile App Development</string>
+    <string name="btn_database_management_systems">Database Management Systems</string>
+    <string name="btn_operating_systems">Operating Systems</string>
+    <string name="btn_advanced_algorithms">Advanced Algorithms</string>
+    <string name="btn_advanced_programming">Advanced Programming</string>
+    <string name="btn_data_mining">Data Mining</string>
+
+    <string name="btn_cyber_security">Cyber Security</string>
+    <string name="btn_multimedia">Multimedia Technology</string>
+    <string name="btn_diploma_mobile_apps">Diploma in Mobile Applications</string>
+    <string name="lbl_computer_science">Computer Science</string>
+
+</resources>

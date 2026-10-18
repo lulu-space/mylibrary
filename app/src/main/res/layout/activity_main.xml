@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFF0">
+
+    <TextView
+        android:id="@+id/universityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="University Main Campus - Ramallah"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- أرقام الهاتف -->
+    <TextView
+        android:id="@+id/phoneNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00970-4-2418888\n00970-4-2510810"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- استفسارات المعلومات -->
+    <TextView
+        android:id="@+id/infoInquiries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For information inquiries:\ninfo@aaup.edu"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp"
+        android:autoLink="email"
+        android:linksClickable="true"/>
+
+    <!-- استفسارات فنية -->
+    <TextView
+        android:id="@+id/technicalInquiries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For technical inquiries:\nadmin@aaup.edu"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp"
+        android:autoLink="email"
+        android:linksClickable="true"/>
+
+    <!-- ساعات العمل -->
+    <TextView
+        android:id="@+id/workingHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Working Hours:\nSaturday through Thursday\n8:00 a.m. – 4:00 p.m."
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- عمادة القبول والتسجيل -->
+    <TextView
+        android:id="@+id/admissionDeanship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deanship of Admission and Registration\nDAR@aaup.edu"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:autoLink="email"
+        android:linksClickable="true"/>
+
+    <!-- القسم المالي -->
+    <TextView
+        android:id="@+id/financialDepartment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Financial Department\nFinanceUnit@aaup.edu"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:autoLink="email"
+        android:linksClickable="true"/>
+
+    <!-- عمادة شؤون الطلاب -->
+    <TextView
+        android:id="@+id/studentAffairsDeanship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deanship of Student Affairs\nStdAffairs@aaup.edu"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:autoLink="email"
+        android:linksClickable="true"/>
+
+    <!-- قسم العلاقات العامة -->
+    <TextView
+        android:id="@+id/publicRelations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Public Relations Department\nPR@aaup.edu"
+        android:textSize="18sp"
+        android:autoLink="email"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+
+    <!-- إضافة أيقونات وسائل التواصل الاجتماعي -->
+
+    <TextView
+        android:id="@+id/followUsTitle"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:text="تابعنا"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- أيقونة Instagram -->
+        <ImageView
+            android:id="@+id/instagramIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/insta"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Instagram" />
+
+        <!-- أيقونة Facebook -->
+        <ImageView
+            android:id="@+id/facebookIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/facebook"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Facebook" />
+
+        <!-- أيقونة Snapchat -->
+        <ImageView
+            android:id="@+id/snapchatIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/snapchat"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Snapchat" />
+
+        <!-- أيقونة YouTube -->
+        <ImageView
+            android:id="@+id/youtubeIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/yt"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="YouTube" />
+
+        <!-- أيقونة Twitter -->
+        <ImageView
+            android:id="@+id/twitterIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/twitter"
+            android:contentDescription="Twitter" />
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/btn_back"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn2" />
+    </LinearLayout>
+
+</LinearLayout>
+

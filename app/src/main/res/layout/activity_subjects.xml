@@ -1,0 +1,367 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5dc">
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!-- Back Button -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Specialization Requirements"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                tools:layout_editor_absoluteX="140dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/btn_back"
+                android:scaleType="fitCenter"
+                android:src="@drawable/backbtn2"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.083" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/hamburger_icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menuburger"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.001" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- Home Button -->
+
+        <!-- Search Bar -->
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="381dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:queryHint="Search Courses" />
+
+        <!-- Button for each course -->
+        <Button
+            android:id="@+id/btn_intro_to_it_lab"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTRODUCTION TO INFORMATION TECHNOLOGY LAB"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_computer_networks_lab"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="COMPUTER NETWORKS LAB"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_digital_logic_design"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DIGITAL LOGIC DESIGN"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_programming_fundamentals_ii_lab"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="PROGRAMMING FUNDAMENTALS II LAB"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_data_structure_lab"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DATA STRUCTURE LAB"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_programming_fundamentals_ii"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="PROGRAMMING FUNDAMENTALS II"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_data_structures"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DATA STRUCTURES"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_intro_to_computer_organization"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="INTRODUCTION TO COMPUTER ORGANIZATION"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_algorithms_and_programming"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="ALGORITHMS AND PROGRAMMING TECHNIQUES"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_intro_to_database"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTRODUCTION TO DATABASE"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_intro_to_database_lab"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTRODUCTION TO DATABASE (LAB)"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_intro_to_software_engineering"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTRODUCTION TO SOFTWARE ENGINEERING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_information_security"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INFORMATION SECURITY"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_mobile_programming"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="MOBILE PROGRAMMING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_intro_to_operating_systems"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTRODUCTION TO OPERATING SYSTEMS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_software_testing_and_validation"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="SOFTWARE TESTING AND VALIDATION"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_internship"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="INTERNSHIP"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <!-- Additional Buttons -->
+        <Button
+            android:id="@+id/btn_computer_science_foundation"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="COMPUTER SCIENCE FOUNDATION"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_programming_languages"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="PROGRAMMING LANGUAGES"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_data_analysis"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DATA ANALYSIS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_software_development"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="SOFTWARE DEVELOPMENT"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_web_development"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="WEB DEVELOPMENT"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_machine_learning"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="MACHINE LEARNING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_computer_graphics"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="COMPUTER GRAPHICS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_network_security"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="NETWORK SECURITY"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_cloud_computing"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="CLOUD COMPUTING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_artificial_intelligence"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="ARTIFICIAL INTELLIGENCE"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_virtualization"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="VIRTUALIZATION"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_big_data"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="BIG DATA"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_mobile_app_development"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="MOBILE APP DEVELOPMENT"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_database_management_systems"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DATABASE MANAGEMENT SYSTEMS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_operating_systems"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="OPERATING SYSTEMS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_advanced_algorithms"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="ADVANCED ALGORITHMS"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_advanced_programming"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="ADVANCED PROGRAMMING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_data_mining"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="DATA MINING"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

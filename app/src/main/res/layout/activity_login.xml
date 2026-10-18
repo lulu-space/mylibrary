@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg" android:gravity="center" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="173dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rc"
+            android:hint="Username"
+            android:inputType="text"
+            android:padding="19dp"
+            android:textColor="@color/black"
+            android:textColorHint="#EF3B3B"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/rc"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="19dp"
+            android:textColor="#0F0C0C"
+            android:textColorHint="#E04D4D"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EF3838"
+            android:padding="20sp"
+            android:text="Login"
+            android:textColor="#FDFDFD" />
+
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/btn_back"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbtn2"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083" />
+
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/btn_home"
+            android:scaleType="fitCenter"
+            android:src="@drawable/homebtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.976" />
+    </LinearLayout>
+</RelativeLayout>
